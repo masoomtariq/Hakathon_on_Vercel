@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: rag_service
+    env: python
+    plan: free
+    region: Singapore
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn -k uvicorn.workers.UvicornWorker main:app"
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: QDRANT_API_KEY
+        sync: false
+      - key: QDRANT_HOST
+        sync: false
+      - key: COLLECTION_NAME
+        sync: false

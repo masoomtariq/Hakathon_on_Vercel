@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+gunicorn
+google-genai
+qdrant-client == 1.11.3
+python-dotenv
+asyncpg  # for Neon Serverless Postgres
+sqlalchemy
+httpx
+pytest-asyncio
